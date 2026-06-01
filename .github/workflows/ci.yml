@@ -44,9 +44,6 @@ jobs:
       - name: go.mod is tidied
         run: go mod tidy && git diff --no-patch --exit-code
 
-      - name: go generate (Binary Version Information and Icon)
-        run: go generate
-
       # --- Build-only (snapshot) with GoReleaser ---
       - name: Build-only (GoReleaser)
         if: "!startsWith(github.ref, 'refs/tags/')"
