@@ -6,7 +6,7 @@
 
 ## Features
 
--   **Window Snapping**: Snap windows to left/right/top/bottom halves, or to any of the four corners.
+-   **Window Snapping**: Snap windows to left/right/top/bottom halves, corners, thirds, or a 3×2 six-part grid.
 -   **Size Cycling**: Repeatedly pressing the snap hotkey cycles the window size between 1/2, 2/3, and 1/3 of the screen.
 -   **Keyboard Centric**: Control everything with hotkeys. No mouse required.
 -   **Settings UI**: Easily view and configure hotkeys through a user-friendly interface.
@@ -41,6 +41,61 @@ RectangleWin Plus comes with a set of intuitive default hotkeys. You can customi
 | **Center** | `Win` + `Alt` + `C` | Center the window on screen. |
 | **Next Display** | `Ctrl` + `Win` + `Alt` + `→` | Move window to next display. |
 | **Prev Display** | `Ctrl` + `Win` + `Alt` + `←` | Move window to previous display. |
+
+### Thirds & Sixths
+
+Snap to any cell of a 3-column or 3×2 grid. These are not bound by default — add them to your `config.yaml` using the `bindfeature` values below.
+
+**Full-height thirds** (3 columns, full height):
+
+| `bindfeature` | Position |
+| :--- | :--- |
+| `moveToLeftThird` | Left 1/3 |
+| `moveToCenterThird` | Center 1/3 |
+| `moveToRightThird` | Right 1/3 |
+
+**Sixths** (3×2 grid — each cell is 1/3 wide × 1/2 tall):
+
+| `bindfeature` | Position |
+| :--- | :--- |
+| `moveToTopLeftSixth` | Top-left |
+| `moveToTopCenterSixth` | Top-center |
+| `moveToTopRightSixth` | Top-right |
+| `moveToBottomLeftSixth` | Bottom-left |
+| `moveToBottomCenterSixth` | Bottom-center |
+| `moveToBottomRightSixth` | Bottom-right |
+
+Example using numpad keys:
+
+```yaml
+- modifier: [Ctrl, Alt]
+  key: "Numeric keypad 1"
+  bindfeature: moveToLeftThird
+- modifier: [Ctrl, Alt]
+  key: "Numeric keypad 2"
+  bindfeature: moveToCenterThird
+- modifier: [Ctrl, Alt]
+  key: "Numeric keypad 3"
+  bindfeature: moveToRightThird
+- modifier: [Ctrl, Alt]
+  key: "Numeric keypad 7"
+  bindfeature: moveToTopLeftSixth
+- modifier: [Ctrl, Alt]
+  key: "Numeric keypad 8"
+  bindfeature: moveToTopCenterSixth
+- modifier: [Ctrl, Alt]
+  key: "Numeric keypad 9"
+  bindfeature: moveToTopRightSixth
+- modifier: [Ctrl, Alt]
+  key: "Numeric keypad 4"
+  bindfeature: moveToBottomLeftSixth
+- modifier: [Ctrl, Alt]
+  key: "Numeric keypad 5"
+  bindfeature: moveToBottomCenterSixth
+- modifier: [Ctrl, Alt]
+  key: "Numeric keypad 6"
+  bindfeature: moveToBottomRightSixth
+```
 
 ### Settings UI
 
