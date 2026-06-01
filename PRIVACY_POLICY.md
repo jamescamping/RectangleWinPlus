@@ -5,7 +5,7 @@ Last Updated: Nov 23, 2025
 
 ## Overview
 
-This application (“the App”) is developed and provided by phoeagon software. We take privacy seriously.
+This application (“the App”) is developed and provided by James Camping. We take privacy seriously.
 This Privacy Policy explains how the App handles data and describes your rights related to its use.
 
 ## Personal Data Collection
@@ -23,7 +23,7 @@ Some features in the App allow users to access publicly available information ho
 + Any such information is publicly accessible data already made available by the platform or its users.
 + The App only retrieves information at the user’s request and does not modify, store, or redistribute
 data retrieved from GitHub or any other external service.
-+ phoeagon software does not control the accuracy, availability, or policies of GitHub or any third-party service.
++ James Camping does not control the accuracy, availability, or policies of GitHub or any third-party service.
 
 ## Third-Party Services
 
@@ -48,4 +48,4 @@ available through the Microsoft Store listing. Continued use of the App after up
 ## Contact Information
 
 If you have any questions about this Privacy Policy, please contact:
-http://github.com/phoeagon/RectangleWinPlus
+http://github.com/jamescamping/RectangleWinPlus

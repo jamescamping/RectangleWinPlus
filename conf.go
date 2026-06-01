@@ -43,6 +43,15 @@ type KeyBinding struct {
 	//   moveToTopRight
 	//   moveToBottomLeft
 	//   moveToBottomRight
+	//   moveToLeftThird
+	//   moveToCenterThird
+	//   moveToRightThird
+	//   moveToTopLeftSixth
+	//   moveToTopCenterSixth
+	//   moveToTopRightSixth
+	//   moveToBottomLeftSixth
+	//   moveToBottomCenterSixth
+	//   moveToBottomRightSixth
 	//   makeSmaller
 	//   makeLarger
 	//   makeFullHeight

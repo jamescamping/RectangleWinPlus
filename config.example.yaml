@@ -104,3 +104,59 @@ keybindings:
       key: Q
       bindfeature: almostMaximize
 
+    # Thirds (full height): numpad 1 = left, 2 = center, 3 = right
+    - modifier:
+        - Ctrl
+        - Alt
+      key: "Numeric keypad 1"
+      bindfeature: moveToLeftThird
+
+    - modifier:
+        - Ctrl
+        - Alt
+      key: "Numeric keypad 2"
+      bindfeature: moveToCenterThird
+
+    - modifier:
+        - Ctrl
+        - Alt
+      key: "Numeric keypad 3"
+      bindfeature: moveToRightThird
+
+    # 3×2 grid (six equal parts): numpad 7/8/9 = top row, numpad 4/5/6 = bottom row
+    - modifier:
+        - Ctrl
+        - Alt
+      key: "Numeric keypad 7"
+      bindfeature: moveToTopLeftSixth
+
+    - modifier:
+        - Ctrl
+        - Alt
+      key: "Numeric keypad 8"
+      bindfeature: moveToTopCenterSixth
+
+    - modifier:
+        - Ctrl
+        - Alt
+      key: "Numeric keypad 9"
+      bindfeature: moveToTopRightSixth
+
+    - modifier:
+        - Ctrl
+        - Alt
+      key: "Numeric keypad 4"
+      bindfeature: moveToBottomLeftSixth
+
+    - modifier:
+        - Ctrl
+        - Alt
+      key: "Numeric keypad 5"
+      bindfeature: moveToBottomCenterSixth
+
+    - modifier:
+        - Ctrl
+        - Alt
+      key: "Numeric keypad 6"
+      bindfeature: moveToBottomRightSixth
+

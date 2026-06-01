@@ -74,10 +74,19 @@ var featureDisplayNames = map[string]string{
 	"pushToLeft":        "Push to Left",
 	"moveToRight":       "Right half",
 	"pushToRight":       "Push to Right",
-	"moveToTopLeft":     "Top-Left corner",
-	"moveToTopRight":    "Top-Right corner",
-	"moveToBottomLeft":  "Bottom-Left corner",
-	"moveToBottomRight": "Bottom-Right corner",
+	"moveToTopLeft":          "Top-Left corner",
+	"moveToTopRight":         "Top-Right corner",
+	"moveToBottomLeft":       "Bottom-Left corner",
+	"moveToBottomRight":      "Bottom-Right corner",
+	"moveToLeftThird":        "Left third",
+	"moveToCenterThird":      "Center third",
+	"moveToRightThird":       "Right third",
+	"moveToTopLeftSixth":     "Top-Left 6th",
+	"moveToTopCenterSixth":   "Top-Center 6th",
+	"moveToTopRightSixth":    "Top-Right 6th",
+	"moveToBottomLeftSixth":  "Bottom-Left 6th",
+	"moveToBottomCenterSixth": "Bottom-Center 6th",
+	"moveToBottomRightSixth": "Bottom-Right 6th",
 	"maximize":          "Maximize",
 	"almostMaximize":    "Almost Maximize",
 	"makeFullHeight":    "Maximize Height",
@@ -99,7 +108,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Usage: %s [options]\n\n", os.Args[0])
 		fmt.Fprintf(os.Stderr, "Options:\n")
 		flag.PrintDefaults()
-		fmt.Fprintf(os.Stderr, "\nFor more information, visit: https://github.com/phoeagon/RectangleWinPlus\n")
+		fmt.Fprintf(os.Stderr, "\nFor more information, visit: https://github.com/jamescamping/RectangleWinPlus\n")
 	}
 
 	debug = flag.Bool("debug", false, "enable debug mode (show console output)")
@@ -253,6 +262,51 @@ func main() {
 		"moveToTopRight":    {"Top-Right corner", func() { cycleCornerFuncs(1) }},
 		"moveToBottomLeft":  {"Bottom-Left corner", func() { cycleCornerFuncs(2) }},
 		"moveToBottomRight": {"Bottom-Right corner", func() { cycleCornerFuncs(3) }},
+		"moveToLeftThird": {"Left third", func() {
+			if _, err := resize(getTargetWindow(), leftOneThirds); err != nil {
+				fmt.Printf("warn: resize: %v\n", err)
+			}
+		}},
+		"moveToCenterThird": {"Center third", func() {
+			if _, err := resize(getTargetWindow(), centerThird); err != nil {
+				fmt.Printf("warn: resize: %v\n", err)
+			}
+		}},
+		"moveToRightThird": {"Right third", func() {
+			if _, err := resize(getTargetWindow(), rightOneThirds); err != nil {
+				fmt.Printf("warn: resize: %v\n", err)
+			}
+		}},
+		"moveToTopLeftSixth": {"Top-Left 6th", func() {
+			if _, err := resize(getTargetWindow(), topLeftSixth); err != nil {
+				fmt.Printf("warn: resize: %v\n", err)
+			}
+		}},
+		"moveToTopCenterSixth": {"Top-Center 6th", func() {
+			if _, err := resize(getTargetWindow(), topCenterSixth); err != nil {
+				fmt.Printf("warn: resize: %v\n", err)
+			}
+		}},
+		"moveToTopRightSixth": {"Top-Right 6th", func() {
+			if _, err := resize(getTargetWindow(), topRightSixth); err != nil {
+				fmt.Printf("warn: resize: %v\n", err)
+			}
+		}},
+		"moveToBottomLeftSixth": {"Bottom-Left 6th", func() {
+			if _, err := resize(getTargetWindow(), bottomLeftSixth); err != nil {
+				fmt.Printf("warn: resize: %v\n", err)
+			}
+		}},
+		"moveToBottomCenterSixth": {"Bottom-Center 6th", func() {
+			if _, err := resize(getTargetWindow(), bottomCenterSixth); err != nil {
+				fmt.Printf("warn: resize: %v\n", err)
+			}
+		}},
+		"moveToBottomRightSixth": {"Bottom-Right 6th", func() {
+			if _, err := resize(getTargetWindow(), bottomRightSixth); err != nil {
+				fmt.Printf("warn: resize: %v\n", err)
+			}
+		}},
 
 		"maximize": {"Maximize", func() {
 			lastResized = 0
@@ -355,6 +409,9 @@ func main() {
 		"leftHalf", "rightHalf", "topHalf", "bottomHalf", // These are not directly in map, they are part of cycle
 		"moveToLeft", "moveToRight", "moveToTop", "moveToBottom",
 		"moveToTopLeft", "moveToTopRight", "moveToBottomLeft", "moveToBottomRight",
+		"moveToLeftThird", "moveToCenterThird", "moveToRightThird",
+		"moveToTopLeftSixth", "moveToTopCenterSixth", "moveToTopRightSixth",
+		"moveToBottomLeftSixth", "moveToBottomCenterSixth", "moveToBottomRightSixth",
 		"moveToCenter", "maximize", "almostMaximize", "makeLarger", "makeSmaller", "makeFullHeight",
 		"nextDisplay", "prevDisplay", "toggleAlwaysOnTop",
 		// pushTo series happen last, because they are less used, as aligned in Rectangle.

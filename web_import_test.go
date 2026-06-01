@@ -12,8 +12,8 @@ func TestConvertToRawURL(t *testing.T) {
 	}{
 		{
 			name:     "GitHub File URL",
-			input:    "https://github.com/phoeagon/RectangleWinPlus/blob/main/config.example.yaml",
-			expected: "https://raw.githubusercontent.com/phoeagon/RectangleWinPlus/main/config.example.yaml",
+			input:    "https://github.com/jamescamping/RectangleWinPlus/blob/main/config.example.yaml",
+			expected: "https://raw.githubusercontent.com/jamescamping/RectangleWinPlus/main/config.example.yaml",
 		},
 		{
 			name:     "GitHub Gist URL",
@@ -42,8 +42,8 @@ func TestConvertToRawURL(t *testing.T) {
 		},
 		{
 			name:     "Already Raw GitHub URL",
-			input:    "https://raw.githubusercontent.com/phoeagon/RectangleWinPlus/main/config.example.yaml",
-			expected: "https://raw.githubusercontent.com/phoeagon/RectangleWinPlus/main/config.example.yaml",
+			input:    "https://raw.githubusercontent.com/jamescamping/RectangleWinPlus/main/config.example.yaml",
+			expected: "https://raw.githubusercontent.com/jamescamping/RectangleWinPlus/main/config.example.yaml",
 		},
 		{
 			name:     "Generic URL (No Change)",

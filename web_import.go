@@ -9,8 +9,8 @@ import (
 // https://gist.githubusercontent.com/phoeagon/9135e2ecec336384fc40c16dee22a959
 // https://gist.githubusercontent.com/phoeagon/9135e2ecec336384fc40c16dee22a959/raw
 // https://gist.github.com/phoeagon/9135e2ecec336384fc40c16dee22a959#file-config-yaml
-// https://raw.githubusercontent.com/phoeagon/RectangleWinPlus/refs/heads/main/config.example.yaml
-// https://github.com/phoeagon/RectangleWinPlus/blob/main/config.example.yaml
+// https://raw.githubusercontent.com/jamescamping/RectangleWinPlus/refs/heads/main/config.example.yaml
+// https://github.com/jamescamping/RectangleWinPlus/blob/main/config.example.yaml
 func convertToRawURL(url string) string {
 	// Strip any fragment (e.g. #file-config-yaml)
 	if idx := strings.Index(url, "#"); idx != -1 {

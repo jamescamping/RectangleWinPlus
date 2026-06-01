@@ -16,7 +16,7 @@
 
 ## Installation
 
-1.  Go to the [Releases](https://github.com/phoeagon/RectangleWinPlus/releases) page.
+1.  Go to the [Releases](https://github.com/jamescamping/RectangleWinPlus/releases) page.
 2.  Download the latest binary (typically `RectangleWinPlus.exe`) for your architecture.
 3.  Run the executable. The application will start and minimize to the system tray.
 4.  (Optional) Right-click the tray icon and select "Run on startup" to have it launch automatically.
@@ -91,7 +91,7 @@ RectangleWin Plus supports several command-line flags:
 To build from source (requires Go 1.17+):
 
 ```sh
-git clone https://github.com/phoeagon/RectangleWinPlus.git
+git clone https://github.com/jamescamping/RectangleWinPlus.git
 cd RectangleWinPlus
 go generate
 GOOS=windows go build -ldflags -H=windowsgui .
@@ -99,7 +99,7 @@ GOOS=windows go build -ldflags -H=windowsgui .
 
 ## Origin & Credits
 
-This project is a fork of [phoeagon/RectangleWin](http://github.com/phoeagon/RectangleWin), which is a fork of [ahmetb/RectangleWin](http://github.com/ahmetb/RectangleWin). It introduces breaking changes and new features like the Settings UI and URL Import.
+This project is a fork of [phoeagon/RectangleWinPlus](http://github.com/phoeagon/RectangleWinPlus), which is itself a fork of [ahmetb/RectangleWin](http://github.com/ahmetb/RectangleWin). It introduces breaking changes and new features like the Settings UI and URL Import.
 
 ## License
 

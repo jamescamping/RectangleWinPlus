@@ -35,7 +35,7 @@ type GitHubRelease struct {
 }
 
 func checkForUpdates() {
-	resp, err := http.Get("https://api.github.com/repos/phoeagon/RectangleWinPlus/releases/latest")
+	resp, err := http.Get("https://api.github.com/repos/jamescamping/RectangleWinPlus/releases/latest")
 	if err != nil {
 		showMessageBox(fmt.Sprintf("Failed to check for updates: %v", err))
 		return

@@ -1,4 +1,4 @@
-module github.com/phoeagon/RectangleWinPlus
+module github.com/jamescamping/RectangleWinPlus
 
 go 1.17
 

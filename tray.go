@@ -27,8 +27,8 @@ import (
 //go:embed assets/tray_icon.ico
 var icon []byte
 
-const repo = "https://github.com/phoeagon/RectangleWinPlus"
-const releases = "https://github.com/phoeagon/RectangleWinPlus/releases"
+const repo = "https://github.com/jamescamping/RectangleWinPlus"
+const releases = "https://github.com/jamescamping/RectangleWinPlus/releases"
 
 func initTray() {
 	systray.Register(onReady, onExit)
@@ -47,7 +47,7 @@ func onReady() {
 	mAbout := systray.AddMenuItem("About", "")
 	go func() {
 		for range mAbout.ClickedCh {
-			showMessageBox("RectangleWin Plus\nVersion: " + currentVersion + "\n\n" + "Copyright (c) 2025 phoeagon.\nhttp://github.com/phoeagon/RectangleWinPlus")
+			showMessageBox("RectangleWin Plus\nVersion: " + currentVersion + "\n\n" + "Copyright (c) 2025 James Camping.\nhttp://github.com/jamescamping/RectangleWinPlus")
 		}
 	}()
 

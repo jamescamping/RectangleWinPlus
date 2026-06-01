@@ -6,7 +6,7 @@ import (
 	"reflect"
 
 	"github.com/gonutz/w32/v2"
-	"github.com/phoeagon/RectangleWinPlus/w32ex"
+	"github.com/jamescamping/RectangleWinPlus/w32ex"
 )
 
 func showMessageBox(text string) {
