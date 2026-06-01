@@ -36,7 +36,10 @@ jobs:
             ${{ steps.go-cache-paths.outputs.go-mod }}
 
       - name: Ensure gofmt
-        run: test -z "$(gofmt -s -d .)"
+        run: |
+          diff=$(gofmt -s -d .)
+          echo "$diff"
+          test -z "$diff"
 
       - name: go.mod is tidied
         run: go mod tidy && git diff --no-patch --exit-code
